@@ -35,11 +35,14 @@ collections:
               label: Keyword
               name: keyword
               widget: "string"
-          - label: "Twitter account"
-            name: "twitter_account"
+          - label: "Facebook handle"
+            name: "facebook_handle"
             widget: "string"
-          - label: "GitHub account"
-            name: "github_account"
+          - label: "Instagram handle"
+            name: "instagram_handle"
+            widget: "string"
+          - label: "LinkedIn handle"
+            name: "linkedin_handle"
             widget: "string"
 
   - name: "meta"
@@ -98,6 +101,12 @@ collections:
     identifier_field: slug
     summary: "{{title}}"
     fields:
+      - label: "Blog post type"
+        name: "type"
+        widget: "select"
+        options:
+          - { label: "Main blog post", value: "main" }
+          - { label: "Subsidiary blog post", value: "subsidiary" }
       - label: "Slug"
         name: "slug"
         widget: "string"
