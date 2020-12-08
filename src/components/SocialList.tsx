@@ -7,16 +7,24 @@ export function SocialList({}) {
   return (
     <div>
       <a
-        title="Twitter"
-        href={`https://twitter.com/${config.twitter_account}`}
+        title="Facebook"
+        href={`https://twitter.com/${config.facebook_handle}`}
         target="_blank"
         rel="noopener"
       >
         <Twitter width={24} height={24} fill={"#222"} />
       </a>
       <a
-        title="GitHub"
-        href={`https://github.com/${config.github_account}`}
+        title="Instagram"
+        href={`https://github.com/${config.instagram_handle}`}
+        target="_blank"
+        rel="noopener"
+      >
+        <GitHub width={24} height={24} fill={"#222"} />
+      </a>
+      <a
+        title="LinkedIn"
+        href={`https://github.com/${config.linkedin_handle}`}
         target="_blank"
         rel="noopener"
       >
