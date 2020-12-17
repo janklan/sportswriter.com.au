@@ -10,27 +10,7 @@ slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
-  
-
-view_groups:
-  - label: Year
-    field: date
-    # groups items based on the value matched by the pattern
-    pattern: \d{4}
-  - label: Drafts
-    field: draft
-
-view_filters:
-  - label: 'Regular blog posts'
-    field: type
-    pattern: 'regular'
-  - label: 'Featured blog posts'
-    field: type
-    pattern: 'featured'
-  - label: Drafts
-    field: draft
-    pattern: true
-    
+      
 collections:
   - name: "config"
     label: "Config"
@@ -125,7 +105,25 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: slug
-    summary: "{{title}}: {{fields.articleSummary}}"
+    summary: "{{title}}; {{commit_date}} {{fields.type}}<br>{{fields.articleSummary}}"
+    view_groups:
+      - label: Year
+        field: date
+        # groups items based on the value matched by the pattern
+        pattern: \d{4}
+      - label: Drafts
+        field: draft
+
+    view_filters:
+      - label: 'Regular blog posts'
+        field: type
+        pattern: 'regular'
+      - label: 'Featured blog posts'
+        field: type
+        pattern: 'featured'
+      - label: Drafts
+        field: draft
+        pattern: true
     fields:
       - label: "Blog post type"
         name: "type"
