@@ -68,7 +68,7 @@ export default function Index({
             </header>
             <div className={styles.content}>{content}</div>
             <ul className={"tag-list"}>
-              {tags.map((it, i) => (
+              {tags && tags.map((it, i) => (
                 <li key={i}>
                   <TagButton tag={getTag(it)} />
                 </li>
