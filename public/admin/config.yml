@@ -125,7 +125,7 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: slug
-    summary: "{{title}}: {{fields.summary}}"
+    summary: "{{title}}: {{fields.articleSummary}}"
     fields:
       - label: "Blog post type"
         name: "type"
@@ -173,7 +173,7 @@ collections:
             - "tags.*.name"
           valueField: "tags.*.slug"
       - label: "Summary"
-        name: "description"
+        name: "articleSummary"
         widget: "text"
         required: true
         hint: Summary is used when listing multiple posts at once.
