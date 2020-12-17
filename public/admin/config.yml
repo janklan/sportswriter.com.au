@@ -4,6 +4,12 @@ backend:
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
+site_url: https://thesportswriter-com-au.netlify.app
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
 
 collections:
   - name: "config"
@@ -97,19 +103,15 @@ collections:
     extension: "mdx"
     format: "frontmatter"
     create: true
-    slug: "{{slug}}"
-    identifier_field: slug
     summary: "{{title}}"
     fields:
       - label: "Blog post type"
         name: "type"
         widget: "select"
         options:
-          - { label: "Main blog post", value: "main" }
-          - { label: "Subsidiary blog post", value: "subsidiary" }
-      - label: "Slug"
-        name: "slug"
-        widget: "string"
+          - { label: "Blog post", value: "main" }
+          - { label: "Featured blog post", value: "subsidiary" }
+        required: true
       - label: "Title"
         name: "title"
         widget: "string"
@@ -145,6 +147,11 @@ collections:
           displayFields:
             - "tags.*.name"
           valueField: "tags.*.slug"
+      - label: "Summary"
+        name: "description"
+        widget: "text"
+        required: true
+        hint: Summary is used when listing multiple posts at once.
       - label: "Body"
         name: "body"
         widget: "markdown"
