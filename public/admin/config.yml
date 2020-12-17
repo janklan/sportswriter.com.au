@@ -10,7 +10,27 @@ slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
+  
 
+view_groups:
+  - label: Year
+    field: date
+    # groups items based on the value matched by the pattern
+    pattern: \d{4}
+  - label: Drafts
+    field: draft
+
+view_filters:
+  - label: 'Regular blog posts'
+    field: type
+    pattern: 'regular'
+  - label: 'Featured blog posts'
+    field: type
+    pattern: 'featured'
+  - label: Drafts
+    field: draft
+    pattern: true
+    
 collections:
   - name: "config"
     label: "Config"
@@ -103,14 +123,14 @@ collections:
     extension: "mdx"
     format: "frontmatter"
     create: true
-    summary: "{{title}}"
+    summary: "{{title}}: {{fields.summary}}"
     fields:
       - label: "Blog post type"
         name: "type"
         widget: "select"
         options:
-          - { label: "Blog post", value: "main" }
-          - { label: "Featured blog post", value: "subsidiary" }
+          - { label: "Regular blog post", value: "regular" }
+          - { label: "Featured blog post", value: "featured" }
         required: true
       - label: "Title"
         name: "title"
