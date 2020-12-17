@@ -25,12 +25,13 @@
     "react-schemaorg": "^1.2.0",
     "react-twitter-embed": "^3.0.3",
     "react-youtube": "^7.11.3",
-    "schema-dts": "^0.6.0"
+    "schema-dts": "^0.7.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.9",
     "@types/node": "^13.11.0",
     "@types/react": "^16.9.32",
+    "@types/youtube": "^0.0.41",
     "jest": "^26.3.0",
     "ts-jest": "^26.2.0",
     "typescript": "^3.8.3",
