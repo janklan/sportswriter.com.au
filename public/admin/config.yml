@@ -123,6 +123,8 @@ collections:
     extension: "mdx"
     format: "frontmatter"
     create: true
+    slug: "{{slug}}"
+    identifier_field: slug
     summary: "{{title}}: {{fields.summary}}"
     fields:
       - label: "Blog post type"
@@ -134,6 +136,9 @@ collections:
         required: true
       - label: "Title"
         name: "title"
+        widget: "string"
+      - label: "Slug"
+        name: "slug"
         widget: "string"
       - label: "Publish Date"
         name: "date"
