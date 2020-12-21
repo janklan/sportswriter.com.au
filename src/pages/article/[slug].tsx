@@ -74,6 +74,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = listAllPostSlugs().flatMap(slug => `/article/${slug}`)
   return {
     paths: paths,
-    fallback: true
+    fallback: false
   }
 }
