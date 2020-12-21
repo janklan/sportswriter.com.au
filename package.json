@@ -32,6 +32,7 @@
     "yaml-loader": "^0.6.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^1.0.3",
     "@sentry/netlify-build-plugin": "^1.0.4",
     "@types/jest": "^26.0.19",
     "@types/js-yaml": "^3.12.5",
