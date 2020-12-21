@@ -1,11 +1,18 @@
 module.exports = {
-  purge: ["./pages/**/*.js", "./components/**/*.js"],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
+  purge: [
+    './src/**/*.ts',
+    './src/**/*.tsx',
+    './src/**/*.svg'
+  ],
+  darkMode: 'media',
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography')
+  ],
   variants: {
-    extend: {},
-  },
-  plugins: [],
-};
+    extend: {
+      borderColor: ['focus-visible'],
+      opacity: ['disabled']
+    }
+  }
+}

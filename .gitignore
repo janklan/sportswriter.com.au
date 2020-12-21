@@ -30,5 +30,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
+# dist
+/dist
+
+# Local Netlify folder
+.netlify
+
+# mdx
+.mdx-data
