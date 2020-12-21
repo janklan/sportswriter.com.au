@@ -56,26 +56,26 @@ export default function Contact () {
             </div>
             <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
             <div className="max-w-lg mx-auto lg:max-w-none">
-                <form name="contact" netlify className="grid grid-cols-1 gap-y-6">
+                <form name="contact" method="post" data-netlify="true" className="grid grid-cols-1 gap-y-6">
                 <div>
                     <label htmlFor="full_name" className="sr-only">Full name</label>
-                    <input type="text" name="full_name" id="full_name" autoComplete="name" className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Full name" />
+                    <input type="text" name="full_name" id="full_name" autoComplete="name" className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Full name" required />
                 </div>
                 <div>
                     <label htmlFor="email" className="sr-only">Email</label>
-                    <input id="email" name="email" type="email" autoComplete="email" className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Email" />
+                    <input id="email" name="email" type="email" autoComplete="email" className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Email" required />
                 </div>
                 <div>
                     <label htmlFor="phone" className="sr-only">Phone</label>
-                    <input type="text" name="phone" id="phone" autoComplete="tel" className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Phone" />
+                    <input type="text" name="phone" id="phone" autoComplete="tel" className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Phone (optional)" />
                 </div>
                 <div>
                     <label htmlFor="message" className="sr-only">Message</label>
-                    <textarea id="message" name="message" rows={4} className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Message"></textarea>
+                    <textarea id="message" name="message" rows={4} className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md" placeholder="Message" required></textarea>
                 </div>
                 <div>
                     <button type="submit" className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                    Submit
+                        Submit
                     </button>
                 </div>
                 </form>
