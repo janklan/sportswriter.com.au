@@ -3,8 +3,14 @@
   command = "npm run export"
 
 [[plugins]]
-package = "netlify-plugin-cache-nextjs"
-package = "@sentry/netlify-build-plugin"
+  package = "netlify-plugin-cache-nextjs"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[[plugins]]
+  package = "@sentry/netlify-build-plugin"
+  
+  [plugins.inputs]
+    sentryOrg = "tacticmedia"
+    sentryProject = "thesportswriter-com-au"
