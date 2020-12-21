@@ -6,6 +6,7 @@ import PostList from '../components/PostList'
 import FeaturedPostList from '../components/FeaturedPostList'
 import { listPostContent, PostContent } from '../lib/posts'
 import Navigation from '../components/Navigation'
+import CallToAction from '../components/CallToAction'
 import Link from 'next/link'
 
 type Props = {
@@ -53,6 +54,7 @@ export default function Index ({ featuredPost, posts, featuredPosts }: Props) {
           </div>
           <PostList posts={posts} />
       </div>
+      <CallToAction />
     </Layout>
   )
 }

@@ -52,10 +52,11 @@ function fetchPostContent (): PostContent[] {
   return postCache
 }
 
-export function countPosts (tag?: string): number {
-  return fetchPostContent().filter(
-    (it) => !tag || (it.tags && it.tags.includes(tag))
-  ).length
+export function countPosts (tag?: string, type?: string): number {
+  return fetchPostContent()
+    .filter(it => !tag || (it.tags && it.tags.includes(tag))) // if a tag is set, get rid of all that doesn't match
+    .filter(it => !type || (it.type && it.type === type)) // if a post type is set, get rid of all that doesn't match
+    .length
 }
 
 export function listPostContent (
