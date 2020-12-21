@@ -28,8 +28,8 @@ export default function Page ({ posts, tags, pagination, page }: Props) {
       <OpenGraphMeta url={url} title={title} />
       <Navigation />
       <div className="container max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl">
-          <a href="/archive">Archive page {page}</a>
+        <h1 className="text-3xl text-gray-400">
+          <a href="/archive" className="text-gray-500 hover:underline">Archive</a> / <span className="text-black">Page {page}</span>
         </h1>
         <PostList posts={posts} />
         { pagination &&

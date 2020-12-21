@@ -25,11 +25,11 @@ export default function Index ({ posts, tag, pagination, page }: Props) {
     <Layout>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
-      <Navigation></Navigation>
+      <Navigation />
 
       <div className="container max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl">
-          <a href="/archive" className="text-gray-300">Archive</a> / <span>{tag.name}</span>
+          <a href="/archive" className="text-gray-300">Archive</a> / {tag.name}
         </h1>
         <PostList posts={posts} />
         { pagination &&
