@@ -6,6 +6,7 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
+    "postbuild": "next-on-netlify",
     "export": "next build && next export -o ./dist",
     "test": "jest"
   },
