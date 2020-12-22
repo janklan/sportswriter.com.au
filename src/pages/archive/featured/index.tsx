@@ -7,6 +7,7 @@ import config from '../../../lib/config'
 import { countPosts, listPostContent, PostContent } from '../../../lib/posts'
 import Navigation from '../../../components/Navigation'
 import Pagination from '../../../components/Pagination'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 type Props = {
   posts: PostContent[];
@@ -24,8 +25,8 @@ export default function Index ({ posts, pagination }: Props) {
       <OpenGraphMeta url={url} title={title} />
       <Navigation />
       <div className="container max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl">
-          <a href="/archive">Archive</a> / <a href="/archive/featured">Featured</a>
+        <h1 className="text-3xl text-gray-300">
+          <Breadcrumb href="/archive">Archive</Breadcrumb> / <Breadcrumb>Featured</Breadcrumb>
         </h1>
         <div className="mt-12 max-w-full mx-auto grid gap-12 gap-y-16 lg:grid-cols-3 mb-16">
             {posts.map((it, i) => (

@@ -8,14 +8,14 @@ type Props = {
 export default function PostItem ({ post }: Props) {
   return (
     <div className="group">
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-400">
         <Date date={parseISO(post.date)} />
       </p>
       <a href={'/article/' + post.slug} className="mt-2 block">
-        <p className="text-xl font-semibold text-gray-900">
+        <p className="text-xl font-semibold text-gray-900 dark:text-gray-300 group-hover:underline">
           {post.title}
         </p>
-        <p className="mt-3 text-base text-gray-500">
+        <p className="mt-3 text-base text-gray-500 dark:text-gray-400">
           {post.articleSummary}
         </p>
       </a>

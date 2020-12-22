@@ -13,9 +13,9 @@ export default function Success () {
       <OpenGraphMeta url={url} title={title} />
       <Navigation />
       <div className="relative py-16 max-w-xl mx-auto">
-        <div className="bg-white shadow sm:rounded-lg">
+        <div className="bg-white dark:bg-gray-900 shadow sm:rounded-lg">
           <div className="px-4 py-5 sm:p-6">
-            <h3 className="text-lg leading-6 font-medium text-gray-900">
+            <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-300">
               Success
             </h3>
             <div className="mt-2 max-w-xl text-sm text-gray-500">
@@ -24,7 +24,7 @@ export default function Success () {
               </p>
             </div>
             <div className="mt-5">
-              <a href="/" className="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
+              <a href="/" className="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-green-700 dark:text-green-300 bg-green-100 dark:bg-green-800 hover:bg-green-200 dark:hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
                 Continue
               </a>
             </div>

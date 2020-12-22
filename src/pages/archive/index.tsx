@@ -9,6 +9,7 @@ import { listTags, TagContent } from '../../lib/tags'
 import Navigation from '../../components/Navigation'
 import Pagination from '../../components/Pagination'
 import TagLink from '../../components/TagLink'
+import Breadcrumb from '../../components/Breadcrumb'
 
 type Props = {
   posts: PostContent[];
@@ -27,10 +28,12 @@ export default function Index ({ posts, tags, pagination }: Props) {
       <OpenGraphMeta url={url} title={title} />
       <Navigation />
       <div className="container max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl">
-        <a href="/archive">Archive</a>
+        <h1 className="text-3xl text-gray-300">
+          <Breadcrumb href="/archive">Archive</Breadcrumb>
         </h1>
-        <PostList posts={posts} />
+        <div className="mb-16">
+          <PostList posts={posts} />
+        </div>
         { pagination &&
         <Pagination
           current={pagination.current}

@@ -7,6 +7,7 @@ import Pagination from '../../../../components/Pagination'
 import config from '../../../../lib/config'
 import { countPosts, listPostContent, PostContent } from '../../../../lib/posts'
 import Navigation from '../../../../components/Navigation'
+import Breadcrumb from '../../../../components/Breadcrumb'
 
 type Props = {
   posts: PostContent[];
@@ -25,8 +26,12 @@ export default function Page ({ posts, pagination, page }: Props) {
       <OpenGraphMeta url={url} title={title} />
       <Navigation />
       <div className="container max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl text-gray-400">
-          <a href="/archive" className="text-gray-500 hover:underline">Archive</a> / <a href="/archive/featured" className="text-gray-500 hover:underline">Featured</a> / <span className="text-black">Page {page}</span>
+        <h1 className="text-3xl text-gray-300">
+          <Breadcrumb href="/archive">Archive</Breadcrumb>
+          {' / '}
+          <Breadcrumb href="/archive/featured">Featured</Breadcrumb>
+          {' / '}
+          <Breadcrumb>Page {page}</Breadcrumb>
         </h1>
         <div className="mt-12 max-w-full mx-auto grid gap-12 gap-y-16 lg:grid-cols-3 mb-16">
             {posts.map((it, i) => (

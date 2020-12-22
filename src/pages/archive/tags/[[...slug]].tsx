@@ -8,6 +8,7 @@ import { countPosts, listPostContent, PostContent } from '../../../lib/posts'
 import { getTag, listTags, TagContent } from '../../../lib/tags'
 import Navigation from '../../../components/Navigation'
 import Pagination from '../../../components/Pagination'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 type Props = {
   posts: PostContent[];
@@ -28,10 +29,14 @@ export default function Index ({ posts, tag, pagination, page }: Props) {
       <Navigation />
 
       <div className="container max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl">
-          <a href="/archive" className="text-gray-300">Archive</a> / {tag.name}
+        <h1 className="text-3xl text-gray-300">
+          <Breadcrumb href="/archive">Archive</Breadcrumb>
+          {' / '}
+          <Breadcrumb>{title}</Breadcrumb>
         </h1>
-        <PostList posts={posts} />
+        <div className="mb-16">
+          <PostList posts={posts} />
+        </div>
         { pagination &&
         <Pagination
           current={pagination.current}
