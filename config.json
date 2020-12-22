@@ -6,8 +6,5 @@
   "posts_per_page": 9,
   "facebook_handle": "facebook",
   "linkedin_handle": "linkedin",
-  "instagram_handle": "linkedin",
-  "email": "foobar@example.com",
-  "phone": "+61 123 123 123",
-  "contactText": "Lorem ipsum - this is editable."
+  "instagram_handle": "linkedin"
 }

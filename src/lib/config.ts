@@ -9,9 +9,6 @@ type Config = {
   readonly instagram_handle: string;
   readonly facebook_handle: string;
   readonly linkedin_handle: string;
-  readonly email: string;
-  readonly phone: string;
-  readonly contactText: string;
 };
 
 export default config as Config

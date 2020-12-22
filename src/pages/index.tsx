@@ -8,6 +8,8 @@ import { listPostContent, PostContent } from '../lib/posts'
 import Navigation from '../components/Navigation'
 import CallToAction from '../components/CallToAction'
 import Link from 'next/link'
+import Homepage from '../lib/homepage'
+import homepage from '../lib/homepage'
 
 type Props = {
   featuredPost: PostContent,
@@ -49,12 +51,12 @@ export default function Index ({ featuredPost, posts, featuredPosts }: Props) {
               From the blog
               </h2>
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+                  {homepage.fromTheBlogSubheaderText}
               </p>
           </div>
           <PostList posts={posts} />
       </div>
-      <CallToAction />
+      <CallToAction text={homepage.tswIntroductionText} />
     </Layout>
   )
 }

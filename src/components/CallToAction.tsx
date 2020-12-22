@@ -1,5 +1,9 @@
 
-export default function CallToAction () {
+type Props = {
+  text: string
+};
+
+export default function CallToAction ({ text }: Props) {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -9,7 +13,7 @@ export default function CallToAction () {
               The Sports Writer
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-500">
-              A little blah blah about whatnot. Trusted by all the logos on the right hand side. This paragraph should be at least three lines long. Bringing sports news to all of you since 1990s!
+              {text}
             </p>
             <div className="mt-8 sm:flex">
               <div className="rounded-md shadow">
