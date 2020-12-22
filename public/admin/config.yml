@@ -111,7 +111,7 @@ collections:
 
           - label: "TSW Introduction"
             name: "tswIntroductionText"
-            widget: "string"
+            widget: "text"
             hint: "Shows under The Sports Writer header in the block with logos"
             required: true
 
@@ -123,13 +123,11 @@ collections:
             name: "contactHeader"
             widget: "string"
             required: true
-
           - label: "Contact page text"
             name: "contactText"
-            widget: "string"
+            widget: "text"
             hint: "Shows under the Contact page header"
             required: true
-
           - label: "Contact Phone"
             name: "phone"
             widget: "string"
