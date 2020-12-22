@@ -59,6 +59,18 @@ collections:
         format: "YYYY-MM-DD"
         dateFormat: "YYYY-MM-DD"
         timeFormat: false
+      - label: "Hero Image"
+        name: "heroImage"
+        widget: "image"
+      - label: "Summary"
+        name: "articleSummary"
+        widget: "text"
+        required: true
+        hint: Summary is used when listing multiple posts at once.
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
       - label: Author
         name: "author"
         widget: relation
@@ -85,14 +97,7 @@ collections:
           displayFields:
             - "tags.*.name"
           valueField: "tags.*.slug"
-      - label: "Summary"
-        name: "articleSummary"
-        widget: "text"
-        required: true
-        hint: Summary is used when listing multiple posts at once.
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
+
   - name: "content"
     label: "Other Content"
     delete: false
