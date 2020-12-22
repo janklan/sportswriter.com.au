@@ -5,7 +5,7 @@ type Props = {
 
 export default function CallToAction ({ text }: Props) {
   return (
-    <div className="bg-white bg-gradient-to-b from-gray-800 to-white dark:to-black">
+    <div className="bg-white bg-gradient-to-b from-gray-300 to-white dark:from-gray-800 dark:to-black">
       <div className="max-w-7xl mx-auto py-12 my-12 px-4 sm:px-6 lg:my-32 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
         <div>
