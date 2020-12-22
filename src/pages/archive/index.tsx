@@ -44,15 +44,6 @@ export default function Index ({ posts, tags, pagination }: Props) {
           }}
         />
       }
-      {/* { tags &&
-        <ul className={'categories'}>
-          {tags.map((it, i) => (
-            <li key={i}>
-              <TagLink tag={it} />
-            </li>
-          ))}
-        </ul>
-      } */}
       </div>
     </Layout>
   )

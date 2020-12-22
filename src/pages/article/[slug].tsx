@@ -34,7 +34,7 @@ export default function Index ({ post, content }: Props) {
     <Layout>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
-      <Navigation></Navigation>
+      <Navigation />
       <div className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="relative px-4 sm:px-6 lg:px-8">
           <div className="text-lg max-w-prose mx-auto">

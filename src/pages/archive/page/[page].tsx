@@ -47,15 +47,6 @@ export default function Page ({ posts, tags, pagination, page }: Props) {
           }}
         />
       }
-      { tags &&
-        <ul className={'categories'}>
-          {tags.map((it, i) => (
-            <li key={i}>
-              <TagLink tag={it} />
-            </li>
-          ))}
-        </ul>
-      }
       </div>
     </Layout>
   )
