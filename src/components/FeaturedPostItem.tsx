@@ -34,7 +34,7 @@ export default function FeaturedPostItem ({ post }: Props) {
               <img className="h-10 w-10 rounded-full" src={getAuthor(post.author).portrait} alt="" />
           </div>
           <div className="ml-3">
-            <p className="text-sm font-medium text-gray-900">
+            <p className="text-sm font-medium text-gray-900 dark:text-gray-300">
                 {getAuthor(post.author).name}
             </p>
             <div className="flex space-x-1 text-sm text-gray-500">

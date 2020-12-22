@@ -9,6 +9,9 @@ import Navigation from '../components/Navigation'
 import CallToAction from '../components/CallToAction'
 import Link from 'next/link'
 import homepage from '../lib/homepage'
+import { getAuthor } from '../lib/authors'
+import Date from '../components/Date'
+import { parseISO } from 'date-fns'
 
 type Props = {
   featuredPost: PostContent,
@@ -24,11 +27,27 @@ export default function Index ({ featuredPost, posts, featuredPosts }: Props) {
         <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div className="sm:text-center lg:text-left">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block text-green-600 xl:inline">{featuredPost.title}</span>
+              <a href={'/article/' + featuredPost.slug} className="block text-green-600 xl:inline">{featuredPost.title}</a>
             </h1>
             <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
               {featuredPost.articleSummary}
             </p>
+            <div className="mt-6 flex items-center">
+            <div className="flex-shrink-0">
+                <span className="sr-only">{getAuthor(featuredPost.author).name}</span>
+                <img className="h-10 w-10 rounded-full" src={getAuthor(featuredPost.author).portrait} alt="" />
+            </div>
+            <div className="ml-3">
+              <p className="text-sm font-medium text-gray-900 dark:text-gray-300">
+                  {getAuthor(featuredPost.author).name}
+              </p>
+              <div className="flex space-x-1 text-sm text-gray-500">
+                  <Date date={parseISO(featuredPost.date)} />
+                  <span aria-hidden="true">&middot;</span>
+                  <span>{featuredPost.minutesToRead} min read</span>
+              </div>
+            </div>
+          </div>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
                 <Link href={'/article/' + featuredPost.slug}>
