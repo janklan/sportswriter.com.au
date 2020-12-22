@@ -11,7 +11,9 @@ export default function Layout ({ children }: Props) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="apple-touch-icon" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/public/images/tennis-ball.svg" />
+        <link rel="mask-icon" href="/public/images/tennis-ball.svg" color="#000000" />
+        <link rel="icon" href="/public/images/tennis-ball.svg"></link>
         <meta name="theme-color" content="#fff" />
       </Head>
       {children}

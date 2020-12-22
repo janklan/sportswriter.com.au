@@ -3,12 +3,13 @@
   "name": "The Sports Writer",
   "icons": [
     {
-      "src": "icon.png",
-      "type": "image/png",
+      "src": "/images/tennis-ball.svg",
+      "type": "image/svg",
       "sizes": "192x192"
     }
   ],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#000000",
-  "theme_color": "#000000"
+  "theme_color": "#000000",
+  "display": "fullscreen"
 }
