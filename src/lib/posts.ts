@@ -14,9 +14,17 @@ export type PostContent = {
   readonly articleSummary: string
   readonly author: string;
   readonly content: string;
+  readonly heroImage: string;
+  readonly minutesToRead: string;
 };
 
 let postCache: PostContent[]
+
+function wordsCount (string) {
+  const pattern = '\\w+'
+  const reg = new RegExp(pattern, 'g')
+  return (string.match(reg) || []).length
+}
 
 function fetchPostContent (): PostContent[] {
   if (postCache) {
@@ -37,7 +45,13 @@ function fetchPostContent (): PostContent[] {
           yaml: (s) => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }) as object
         }
       })
-      const matterData = Object.assign(matterResult.data, { content: matterResult.content }) as PostContent
+
+      const matterData = Object.assign(
+        matterResult.data,
+        {
+          content: matterResult.content,
+          minutesToRead: String(Math.round(wordsCount(matterResult.content) / 180))
+        }) as PostContent
 
       return matterData
     })

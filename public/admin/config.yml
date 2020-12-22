@@ -30,22 +30,22 @@ collections:
         field: draft
 
     view_filters:
-      - label: 'Regular blog posts'
+      - label: 'Regular'
         field: type
         pattern: 'regular'
-      - label: 'Featured blog posts'
+      - label: 'Featured'
         field: type
         pattern: 'featured'
       - label: Drafts
         field: draft
         pattern: true
     fields:
-      - label: "Blog post type"
+      - label: "Article type"
         name: "type"
         widget: "select"
         options:
-          - { label: "Regular blog post", value: "regular" }
-          - { label: "Featured blog post", value: "featured" }
+          - { label: "Regular article", value: "regular" }
+          - { label: "Featured article", value: "featured" }
         required: true
       - label: "Title"
         name: "title"
@@ -166,6 +166,9 @@ collections:
               - label: "Introduction"
                 name: "introduction"
                 widget: "text"
+              - label: "Portrait"
+                name: "portrait"
+                widget: "image"
       - name: "tags"
         label: "Tags"
         file: "meta/tags.yml"

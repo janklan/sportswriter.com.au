@@ -8,7 +8,6 @@ import { listPostContent, PostContent } from '../lib/posts'
 import Navigation from '../components/Navigation'
 import CallToAction from '../components/CallToAction'
 import Link from 'next/link'
-import Homepage from '../lib/homepage'
 import homepage from '../lib/homepage'
 
 type Props = {
@@ -21,7 +20,7 @@ export default function Index ({ featuredPost, posts, featuredPosts }: Props) {
     <Layout>
       <BasicMeta url={'/'} />
       <OpenGraphMeta url={'/'} />
-      <Navigation heroImage="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80">
+      <Navigation heroImage={featuredPost.heroImage}>
         <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div className="sm:text-center lg:text-left">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
@@ -45,7 +44,7 @@ export default function Index ({ featuredPost, posts, featuredPosts }: Props) {
 
       <FeaturedPostList posts={featuredPosts} />
 
-      <div className="container mx-auto py-32 px-4 sm:px-6 lg:px-8">
+      <div className="container max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8 mt-12">
           <div className="text-center">
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
               From the blog
@@ -65,7 +64,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const featuredPosts = listPostContent(1, 3, null, 'featured')
   return {
     props: {
-      featuredPost: featuredPosts.pop(),
+      featuredPost: featuredPosts.shift(),
       featuredPosts,
       posts: listPostContent(1, 6, null, 'regular')
     }
