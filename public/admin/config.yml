@@ -10,102 +10,8 @@ slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
-      
+
 collections:
-  - name: "config"
-    label: "Config"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - name: "general"
-        label: "Site Config"
-        file: "config.json"
-        description: "General site settings"
-        fields:
-          - label: "URL"
-            name: "base_url"
-            widget: "string"
-            hint: "Do not enter the trailing slash of the URL"
-          - label: "Site title"
-            name: "site_title"
-            widget: "string"
-          - label: "Site description"
-            name: "site_description"
-            widget: "string"
-          - label: "Site keywords"
-            name: "site_keywords"
-            widget: "list"
-            summary: "{{fields.keyword.keyword}}"
-            field:
-              label: Keyword
-              name: keyword
-              widget: "string"
-          - label: "Facebook handle"
-            name: "facebook_handle"
-            widget: "string"
-          - label: "Instagram handle"
-            name: "instagram_handle"
-            widget: "string"
-          - label: "LinkedIn handle"
-            name: "linkedin_handle"
-            widget: "string"
-          - label: "Contact Phone"
-            name: "phone"
-            widget: "string"
-          - label: "Contact email"
-            name: "email"
-            widget: "string"
-          - label: "Contact page text"
-            name: "contactText"
-            widget: "string"
-
-  - name: "meta"
-    label: "Meta"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - name: "authors"
-        label: "Authors"
-        file: "meta/authors.yml"
-        description: "Author descriptions"
-        fields:
-          - name: authors
-            label: Authors
-            label_singular: "Author"
-            widget: list
-            fields:
-              - label: "Slug"
-                name: "slug"
-                widget: "string"
-                hint: "The part of a URL identifies the author"
-              - label: "Name"
-                name: "name"
-                widget: "string"
-                hint: "First and Last"
-              - label: "Introduction"
-                name: "introduction"
-                widget: "text"
-      - name: "tags"
-        label: "Tags"
-        file: "meta/tags.yml"
-        description: "List of tags"
-        fields:
-          - name: tags
-            label: Tags
-            label_singular: "Tag"
-            widget: list
-            fields:
-              - label: "Slug"
-                name: "slug"
-                widget: "string"
-                hint: "The part of a URL identifies the tag"
-              - label: "Display Name"
-                name: "name"
-                widget: "string"
-                hint: "Tag name for displaying on the site"
-
   - name: "posts"
     label: "Posts"
     folder: "src/posts"
@@ -187,3 +93,119 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+  - name: "config"
+    label: "Config"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Site Config"
+        file: "config.json"
+        description: "General site settings"
+        fields:
+          - label: "URL"
+            name: "base_url"
+            widget: "string"
+            hint: "Do not enter the trailing slash of the URL"
+          - label: "Site title"
+            name: "site_title"
+            widget: "string"
+          - label: "Site description"
+            name: "site_description"
+            widget: "string"
+          - label: "Site keywords"
+            name: "site_keywords"
+            widget: "list"
+            summary: "{{fields.keyword.keyword}}"
+            field:
+              label: Keyword
+              name: keyword
+              widget: "string"
+          - label: "Facebook handle"
+            name: "facebook_handle"
+            widget: "string"
+          - label: "Instagram handle"
+            name: "instagram_handle"
+            widget: "string"
+          - label: "LinkedIn handle"
+            name: "linkedin_handle"
+            widget: "string"
+          - label: "Contact Phone"
+            name: "phone"
+            widget: "string"
+          - label: "Contact email"
+            name: "email"
+            widget: "string"
+          - label: "Contact page text"
+            name: "contactText"
+            widget: "string"
+
+  - name: "meta"
+    label: "Meta"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "textBlocks"
+        label: "Text blocks"
+        file: "meta/text-blocks.json"
+        description: "Various isolated blocks of text across the website"
+        fields:
+          - label: "Contact page text"
+            name: "contactText"
+            widget: "string"
+            hint: "Shows under the Get In Touch header on the contact page"
+            required: true
+
+          - label: "From The Blog subheader"
+            name: "fromTheBlogSubheaderText"
+            widget: "string"
+            hint: "Shows under From The Blog header on the homepage"
+            required: true
+
+          - label: "TSW Introduction"
+            name: "tswIntroductionText"
+            widget: "string"
+            hint: "Shows under The Sports Writer header in the block with logos"
+            required: true
+
+      - name: "authors"
+        label: "Authors"
+        file: "meta/authors.yml"
+        description: "Author descriptions"
+        fields:
+          - name: authors
+            label: Authors
+            label_singular: "Author"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the author"
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                hint: "First and Last"
+              - label: "Introduction"
+                name: "introduction"
+                widget: "text"
+      - name: "tags"
+        label: "Tags"
+        file: "meta/tags.yml"
+        description: "List of tags"
+        fields:
+          - name: tags
+            label: Tags
+            label_singular: "Tag"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the tag"
+              - label: "Display Name"
+                name: "name"
+                widget: "string"
+                hint: "Tag name for displaying on the site"
