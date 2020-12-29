@@ -15,16 +15,9 @@ export type PostContent = {
   readonly author: string;
   readonly content: string;
   readonly heroImage: string;
-  readonly minutesToRead: string;
 };
 
 let postCache: PostContent[]
-
-function wordsCount (string) {
-  const pattern = '\\w+'
-  const reg = new RegExp(pattern, 'g')
-  return (string.match(reg) || []).length
-}
 
 function fetchPostContent (): PostContent[] {
   if (postCache) {
@@ -49,8 +42,7 @@ function fetchPostContent (): PostContent[] {
       const matterData = Object.assign(
         matterResult.data,
         {
-          content: matterResult.content,
-          minutesToRead: String(Math.round(wordsCount(matterResult.content) / 180))
+          content: matterResult.content
         }) as PostContent
 
       return matterData

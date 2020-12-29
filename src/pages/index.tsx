@@ -43,8 +43,6 @@ export default function Index ({ featuredPost, posts, featuredPosts }: Props) {
               </p>
               <div className="flex space-x-1 text-sm text-gray-500">
                   <Date date={parseISO(featuredPost.date)} />
-                  <span aria-hidden="true">&middot;</span>
-                  <span>{featuredPost.minutesToRead} min read</span>
               </div>
             </div>
           </div>

@@ -39,8 +39,6 @@ export default function FeaturedPostItem ({ post }: Props) {
             </p>
             <div className="flex space-x-1 text-sm text-gray-500">
                 <Date date={parseISO(post.date)} />
-                <span aria-hidden="true">&middot;</span>
-                <span>{post.minutesToRead} min read</span>
             </div>
           </div>
         </div>
