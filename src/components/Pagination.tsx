@@ -36,7 +36,7 @@ export default function Pagination ({ current, pages, link }: Props) {
           it.excerpt
             ? <span key={i} className="border-transparent text-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">...</span>
             : <Link key={i} href={link.href(it.page)} as={link.as(it.page)}>
-                  <a className={'border-t-2 pt-4 px-4 inline-flex items-center text-sm ' + (it.page === current ? 'border-green-700 text-green-700 font-extrabold' : 'font-medium border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-400 hover:border-gray-300 dark:hover:border-gray-200')}>
+                  <a className={'border-t-2 pt-4 px-4 inline-flex items-center text-sm ' + (it.page === current ? 'border-sportswriter-700 text-sportswriter-700 font-extrabold' : 'font-medium border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-400 hover:border-gray-300 dark:hover:border-gray-200')}>
                     {it.page}
                   </a>
                 </Link>

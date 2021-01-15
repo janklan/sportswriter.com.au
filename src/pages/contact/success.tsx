@@ -24,7 +24,7 @@ export default function Success () {
               </p>
             </div>
             <div className="mt-5">
-              <a href="/" className="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-green-700 dark:text-green-300 bg-green-100 dark:bg-green-800 hover:bg-green-200 dark:hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
+              <a href="/" className="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-sportswriter-700 dark:text-sportswriter-300 bg-sportswriter-100 dark:bg-sportswriter-800 hover:bg-sportswriter-200 dark:hover:bg-sportswriter-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
                 Continue
               </a>
             </div>

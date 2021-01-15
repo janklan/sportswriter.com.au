@@ -30,12 +30,12 @@ collections:
         field: draft
 
     view_filters:
-      - label: 'Regular'
+      - label: "Regular"
         field: type
-        pattern: 'regular'
-      - label: 'Featured'
+        pattern: "regular"
+      - label: "Featured"
         field: type
-        pattern: 'featured'
+        pattern: "featured"
       - label: Drafts
         field: draft
         pattern: true

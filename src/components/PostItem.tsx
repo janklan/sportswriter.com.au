@@ -20,7 +20,7 @@ export default function PostItem ({ post }: Props) {
         </p>
       </a>
       <div className="mt-3">
-        <a href={'/article/' + post.slug} className="text-base font-semibold text-green-600 hover:text-green-500 group-hover:underline">
+        <a href={'/article/' + post.slug} className="text-base font-semibold text-sportswriter hover:text-sportswriter group-hover:underline">
           Read full story
         </a>
       </div>

@@ -5,7 +5,7 @@ type Props = {
 
 export default function CallToAction ({ text }: Props) {
   return (
-    <div className="bg-white bg-gradient-to-b from-yellow-50 to-white dark:from-gray-800 dark:to-black">
+    <div className="bg-white bg-gradient-to-b from-sportswriter-100 to-white dark:from-gray-800 dark:to-black">
       <div className="max-w-7xl mx-auto py-12 my-12 px-4 sm:px-6 lg:my-32 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
         <div>
@@ -17,13 +17,13 @@ export default function CallToAction ({ text }: Props) {
             </p>
             <div className="mt-8 sm:flex">
               <div className="rounded-md shadow">
-                <a href="/archive" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                <a href="/archive" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sportswriter hover:bg-sportswriter-700">
                   Browse archives
                 </a>
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
-                <a href="/contact" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200">
-                  Contact Us
+                <a href="/contact" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-sportswriter-700 bg-sportswriter-100 hover:bg-sportswriter-200">
+                  Get in touch
                 </a>
               </div>
             </div>

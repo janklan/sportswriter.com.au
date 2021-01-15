@@ -23,7 +23,7 @@ export default function FeaturedPostList ({ posts }: Props) {
                     <FeaturedPostItem post={it} key={i} />
                 ))}
                 <div className="flex justify-center items-center">
-                  <a href="/archive/featured" className="flex items-center justify-center text-green-600 font-bold border-4 border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 rounded-full p-5 shadow-lg hover:shadow-xl hover:bg-gray-100 dark:hover:bg-gray-900 hover:border-green-500">
+                  <a href="/archive/featured" className="flex items-center justify-center text-sportswriter font-bold border-4 border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 rounded-full p-5 shadow-lg hover:shadow-xl hover:bg-gray-100 dark:hover:bg-gray-900 hover:border-sportswriter">
                     More this way &rsaquo;
                   </a>
                 </div>
