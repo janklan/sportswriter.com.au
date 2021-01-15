@@ -22,9 +22,12 @@ export default function Navigation ({ children, heroImage }: Props) {
             <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between w-full md:w-auto">
-                  <a href="/">
-                    <span className="sr-only">The Sports Writer</span>
-                    <img className="h-8 w-auto sm:h-10" src="/images/tennis-ball.svg" />
+                  <a href="/" className="flex items-center">
+                    <span className="flex flex-col items-end text-gray-600">
+                      <span className="text-2xl leading-5">sports<strong>writer</strong></span>
+                      <small className="text-sm leading-none">.com.au</small>
+                    </span>
+                    <img className="pl-2 h-16 w-auto sm:h-10" src="/images/tennis-ball.svg" />
                   </a>
                   <div className="-mr-2 flex items-center md:hidden">
                     <button onClick={() => setActive(!active)} type="button" className="bg-white dark:bg-black rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sportswriter" id="main-menu" aria-haspopup="true">
