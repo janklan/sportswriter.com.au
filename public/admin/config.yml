@@ -4,7 +4,7 @@ backend:
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
-site_url: https://thesportswriter-com-au.netlify.app
+site_url: https://sportswriter-com-au.netlify.app
 
 slug:
   encoding: "ascii"

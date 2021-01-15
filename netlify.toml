@@ -7,7 +7,7 @@
 
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
-  
+
   [plugins.inputs]
     sentryOrg = "tacticmedia"
-    sentryProject = "thesportswriter-com-au"
+    sentryProject = "sportswriter-com-au"
