@@ -10,7 +10,7 @@ export default function CallToAction ({ text }: Props) {
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
         <div>
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-400 sm:text-4xl">
-              The Sports Writer
+              Sportswriter
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-500 dark:text-gray-300">
               {text}
@@ -23,7 +23,7 @@ export default function CallToAction ({ text }: Props) {
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <a href="/contact" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-sportswriter-700 bg-sportswriter-100 hover:bg-sportswriter-200">
-                  Get in touch
+                  Contact us
                 </a>
               </div>
             </div>

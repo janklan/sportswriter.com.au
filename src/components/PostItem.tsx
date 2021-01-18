@@ -8,6 +8,14 @@ type Props = {
 export default function PostItem ({ post }: Props) {
   return (
     <div className="group">
+      { post.heroImage
+        ? <div className="flex-shrink-0">
+            <a href={'/article/' + post.slug}>
+              <img className="h-48 w-full object-cover" src={post.heroImage} alt="" />
+            </a>
+          </div>
+        : null
+      }
       <p className="text-sm text-gray-500 dark:text-gray-400">
         <Date date={parseISO(post.date)} />
       </p>

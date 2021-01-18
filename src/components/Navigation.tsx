@@ -11,7 +11,7 @@ export default function Navigation ({ children, heroImage }: Props) {
   const router = useRouter()
   const [active, setActive] = useState(false)
   return (
-    <div className="relative bg-white  dark:bg-black border border-r-0 border-l-0 border-t-0 border-b-1 border-gray-100 dark:border-gray-700">
+    <div className="relative bg-white  dark:bg-black border border-r-0 border-l-0 border-t-0 border-b-1 border-gray-100 dark:border-gray-700 z-50">
       <div className="max-w-7xl mx-auto">
         <div className={'relative z-10 pb-8 bg-white dark:bg-black lg:max-w-2xl lg:w-full ' + (heroImage ? ' sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32' : null)}>
           <svg className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white dark:text-black transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
