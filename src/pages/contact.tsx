@@ -55,7 +55,7 @@ export default function Contact () {
             </div>
             <div className="bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
               <div className="max-w-lg mx-auto lg:max-w-none">
-                  <form name="Contact Form" action="/contact/success" method="post" data-netlify="true" data-netlify-honeypot="address" className="grid grid-cols-1 gap-y-6">
+                  <form name="Contact Form" method="post" data-netlify="true" data-netlify-honeypot="address" className="grid grid-cols-1 gap-y-6">
                     <div>
                         <label htmlFor="full_name" className="sr-only">Full name</label>
                         <input type="text" name="full_name" id="full_name" autoComplete="name" className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-sportswriter focus:border-sportswriter border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300" placeholder="Full name" required />
