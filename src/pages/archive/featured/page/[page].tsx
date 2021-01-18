@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Layout from '../../../../components/Layout'
 import BasicMeta from '../../../../components/meta/BasicMeta'
 import OpenGraphMeta from '../../../../components/meta/OpenGraphMeta'
-import FeaturedPostItem from '../../../../components/FeaturedPostItem'
+import PostItemWithHeroImage from '../../../../components/PostItemWithHeroImage'
 import Pagination from '../../../../components/Pagination'
 import config from '../../../../lib/config'
 import { countPosts, listPostContent, PostContent } from '../../../../lib/posts'
@@ -35,7 +35,7 @@ export default function Page ({ posts, pagination, page }: Props) {
         </h1>
         <div className="mt-12 max-w-full mx-auto grid gap-12 gap-y-16 lg:grid-cols-3 mb-16">
             {posts.map((it, i) => (
-                <FeaturedPostItem post={it} key={i} />
+                <PostItemWithHeroImage post={it} key={i} />
             ))}
         </div>
         { pagination &&

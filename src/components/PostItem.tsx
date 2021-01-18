@@ -2,20 +2,19 @@ import { PostContent } from '../lib/posts'
 import Date from './Date'
 import { parseISO } from 'date-fns'
 
+/**
+ * Deprecated, removal pending.
+ *
+ * The customer requested to always show a hero image, so the FeaturedPostItem
+ *  was turn into a PostItemWithHeroImage and this one was no longer used.
+ */
+
 type Props = {
   post: PostContent;
 };
 export default function PostItem ({ post }: Props) {
   return (
     <div className="group">
-      { post.heroImage
-        ? <div className="flex-shrink-0">
-            <a href={'/article/' + post.slug}>
-              <img className="h-48 w-full object-cover" src={post.heroImage} alt="" />
-            </a>
-          </div>
-        : null
-      }
       <p className="text-sm text-gray-500 dark:text-gray-400">
         <Date date={parseISO(post.date)} />
       </p>

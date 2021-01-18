@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import React from 'react'
 import { PostContent } from '../lib/posts'
-import FeaturedPostItem from './FeaturedPostItem'
+import PostItemWithHeroImage from './PostItemWithHeroImage'
 
 type Props = {
     posts: PostContent[];
@@ -20,7 +19,7 @@ export default function FeaturedPostList ({ posts }: Props) {
             </div>
             <div className="mt-12 max-w-full mx-auto grid gap-5 lg:grid-cols-3">
                 {posts.map((it, i) => (
-                    <FeaturedPostItem post={it} key={i} />
+                    <PostItemWithHeroImage post={it} key={i} />
                 ))}
                 <div className="flex justify-center items-center">
                   <a href="/archive/featured" className="flex items-center justify-center text-sportswriter font-bold border-4 border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 rounded-full p-5 shadow-lg hover:shadow-xl hover:bg-gray-100 dark:hover:bg-gray-900 hover:border-sportswriter">
