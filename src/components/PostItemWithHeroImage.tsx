@@ -6,7 +6,7 @@ import { parseISO } from 'date-fns'
 type Props = {
   post: PostContent;
 };
-export default function FeaturedPostItem ({ post }: Props) {
+export default function PostItemWithHeroImage ({ post }: Props) {
   return (
     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
       { post.heroImage
